@@ -1,0 +1,33 @@
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+    <display-name>demo-servlet</display-name>
+
+    <!-- 默认访问页面 -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- 访问具体类 -->
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>com.xhlim.demo.servlet.servlet.UserServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- 用户访问地址 -->
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/demo/user/get</url-pattern>
+    </servlet-mapping>
+
+</web-app>
+
+
